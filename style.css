@@ -424,3 +424,49 @@ transition:.5s;
 .galleryPhoto:hover{
 box-shadow:0 0 35px #fff,0 0 50px #ff66b3;
 }
+/* Floating Hearts */
+
+.floatingHeart{
+
+position:fixed;
+
+bottom:-50px;
+
+font-size:30px;
+
+z-index:5;
+
+animation:heartFloat linear forwards;
+
+pointer-events:none;
+
+}
+
+
+@keyframes heartFloat{
+
+0%{
+
+transform:translateY(0) scale(1);
+
+opacity:1;
+
+}
+
+50%{
+
+transform:translateY(-50vh) scale(1.3);
+
+opacity:.8;
+
+}
+
+100%{
+
+transform:translateY(-110vh) scale(.8);
+
+opacity:0;
+
+}
+
+}

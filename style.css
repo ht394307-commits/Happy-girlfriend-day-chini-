@@ -289,3 +289,138 @@ transform:translateY(-50px);
 transform:translateY(110vh);
 }
 }
+/* Twinkling Lights */
+
+.lights:before,
+.lights:after{
+content:"✨ ✨ ✨ ✨ ✨";
+position:absolute;
+width:100%;
+top:10px;
+left:0;
+font-size:25px;
+animation:twinkle 2s infinite alternate;
+z-index:0;
+}
+
+.lights:after{
+top:auto;
+bottom:20px;
+animation-delay:1s;
+}
+
+@keyframes twinkle{
+0%{
+opacity:.3;
+transform:scale(.9);
+}
+100%{
+opacity:1;
+transform:scale(1.1);
+}
+}
+
+
+/* Sparkle Effect */
+
+.slide h2,
+.slide h1{
+animation:softGlow 2s infinite alternate;
+}
+
+@keyframes softGlow{
+from{
+filter:drop-shadow(0 0 5px #ff66b3);
+}
+to{
+filter:drop-shadow(0 0 20px #fff);
+}
+}
+
+
+/* Mobile Responsive */
+
+@media(max-width:600px){
+
+.title{
+font-size:45px;
+}
+
+.finalTitle{
+font-size:50px;
+}
+
+.subtitle{
+font-size:17px;
+}
+
+.mainPhoto{
+width:210px;
+height:210px;
+}
+
+.letter{
+font-size:16px;
+line-height:26px;
+padding:18px;
+max-height:55vh;
+overflow:auto;
+}
+
+.galleryPhoto{
+width:150px;
+height:180px;
+}
+
+.reasonBox{
+width:95%;
+}
+
+.reasonBox p{
+font-size:17px;
+}
+
+button{
+font-size:16px;
+padding:12px 22px;
+}
+
+}
+
+
+/* Smooth Scroll & Layer */
+
+.stars,
+.lights,
+.balloons,
+.petals{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+}
+
+.slider{
+z-index:2;
+}
+
+.slide{
+position:relative;
+z-index:3;
+}
+
+
+/* Image Shine */
+
+.mainPhoto,
+.galleryPhoto{
+transition:.5s;
+}
+
+.mainPhoto:hover,
+.galleryPhoto:hover{
+box-shadow:0 0 35px #fff,0 0 50px #ff66b3;
+}

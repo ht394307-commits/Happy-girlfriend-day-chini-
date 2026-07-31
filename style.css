@@ -470,3 +470,6 @@ opacity:0;
 }
 
 }
+.thirdPhoto {
+  object-fit: contain;
+}

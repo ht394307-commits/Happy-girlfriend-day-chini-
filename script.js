@@ -91,3 +91,64 @@ function celebrateLove(){
     },800);
 
 }
+// Floating Hearts Effect
+
+function createHeart(){
+
+    let heart = document.createElement("div");
+
+    heart.innerHTML = "❤️";
+
+    heart.className = "floatingHeart";
+
+    heart.style.left = Math.random()*100 + "%";
+
+    heart.style.animationDuration =
+    (3 + Math.random()*3) + "s";
+
+    document.body.appendChild(heart);
+
+
+    setTimeout(()=>{
+
+        heart.remove();
+
+    },6000);
+
+}
+
+
+setInterval(createHeart,1200);
+
+
+
+// Page Start Effect
+
+window.addEventListener("load",()=>{
+
+    showSlide(0);
+
+});
+
+
+
+// Photo Click Glow Effect
+
+let photos = document.querySelectorAll(".mainPhoto,.galleryPhoto");
+
+
+photos.forEach(photo=>{
+
+    photo.addEventListener("click",()=>{
+
+        photo.style.transform="scale(1.1)";
+
+        setTimeout(()=>{
+
+            photo.style.transform="";
+
+        },500);
+
+    });
+
+});
